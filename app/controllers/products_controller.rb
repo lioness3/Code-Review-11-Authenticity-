@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @reviews = @product.reviews
+    @review = @product.reviews
     render :edit
   end
 
