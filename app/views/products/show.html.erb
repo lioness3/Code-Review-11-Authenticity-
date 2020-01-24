@@ -23,7 +23,7 @@
 
       <p>I bet you’re still using Bootstrap too…</p>
     </div>
-
+    <h5>This product was made in: <%= @product.country_of_origin%> </h5>
     <div class="reviews">
       <% if @product.reviews.any? %>
       <ul class = "list-group">

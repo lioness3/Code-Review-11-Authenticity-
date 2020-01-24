@@ -5,7 +5,7 @@
   <% if @products.any? %>
     <% if @reviews.any? %>
       <div class="most_reviews">
-        <h1>Check out our most popular products</h1>
+        <h1>Check out our most popular product</h1>
         <%= link_to @popular.name, product_path(@popular) %>
       </div>
     <% else %>
