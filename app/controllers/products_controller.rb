@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   # def secret
   # end
   def index
-
     @products = Product.all
     @product_selection = @products.name
     @usa = Product.usa

@@ -1,8 +1,13 @@
+
 <% if object.errors.any? %>
   <h3>Please fix these errors:</h3>
   <ul>
+
     <% object.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
+  <% if @review.errors %>
+  <p> Youre character count was only <%= @review.content_body.count('content_body') %> </p>
   </ul>
+<% end %>
 <% end %>
