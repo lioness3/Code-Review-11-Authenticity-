@@ -1,0 +1,60 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ body{
+   background-color: lightblue;
+   margin: 0 10%;
+ }
+
+.logo{
+text-align: center;
+}
+.logo h1{
+  margin: 0%;
+  padding: 0%;
+}
+.logo p{
+  font-size: 5pt;
+}
+.contact_info{
+  font-size: 10px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+#logo{
+font-size: 20px;
+float:right;
+}
+.product_info{
+  background-color: white;
+  border-radius: 20pt;
+  padding: 10%;
+  text-align: center;
+}
+
+.description{
+  font-size: 5pt;
+  text-align: left;
+  padding:0%;
+}
+.categorie, .made_in_america{
+margin:0;
+padding:5%;
+text-align: center;
+background-color: white;
+
+}
+.categorie ul, .made_in_america ul{
+list-style-type: none;
+text-align: left;
+}
+
+.add_product{
+margin-top: 10%;
+}
+#empty_row{
+  background-color: lightgrey;
+}
+#return_to_products{
+  text-align: center;
+}

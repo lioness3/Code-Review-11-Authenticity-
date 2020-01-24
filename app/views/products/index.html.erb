@@ -1,0 +1,49 @@
+<%= render "layouts/company_logo" %>
+
+<div class="categorie">
+
+  <% if @products.any? %>
+    <% if @reviews.any? %>
+      <div class="most_reviews">
+        <h1>Check out our most popular products</h1>
+        <%= link_to @popular.name, product_path(@popular) %>
+      </div>
+    <% else %>
+    <p>Be the first to review a product!</p>
+    <% end %>
+
+    <h1>Product list</h1>
+    <ul>
+      <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+    </ul>
+
+    <h1>Check out our newest products</h1>
+    <ul>
+      <% @top.each do |x| %>
+      <li><%= link_to x.name, product_path(x) %></li>
+      <% end %>
+      <% else %>
+      <p>There are no products yet.</p>
+  <% end %>
+</div>
+
+<div class="made_in_america">
+  <h1> Made in America 🇺🇸</h1>
+  <% if @usa.any? %>
+    <ul>
+      <% @usa.each do |x| %>
+      <li><%= link_to x.name, product_path(x) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no products made in the US.</p>
+  <% end %>
+
+  <div class="add_product">
+    <p><%= link_to "New Product", new_product_path %></p>
+  </div>
+</div>
+
+<%= render "layouts/company_info" %>

@@ -1,0 +1,22 @@
+<%= render "layouts/company_logo" %>
+ <h1>Edit</h1>
+ <p> Name: <%= @product.name %></p>
+ <p> Cost: <%= @product.cost %></p>
+ <p> Made in: <%= @product.country_of_origin %></p>
+
+<%= render "layouts/product_form", :object => @product %>
+
+<% if @reviews.any? %>
+  <h4>Here are the current reviews for this product</h4>
+  <div class="add_review">
+    <%= form_for @reviews do |f| %>
+    <%= f.label :rating %>
+    <%= f.integer :rating %>
+    <%= f.label :content_body %>
+    <%= f.text_field :content_body%>
+    <%= f.collection_select(:product_id, @reviews, :id, :rating, :content_body)%>
+    <%= f.submit  %>
+    <% end %>
+  </div>
+<% end %>
+<%= render "layouts/company_info" %>
