@@ -9,12 +9,13 @@ class UsersController < ApplicationController
     if params[:admin] == true
       @user.admin = true
     end
+    @user.email.downcase!
     if @user.save
-      flash[:notice] = "You've successfully signed up!"
+      flash.now.notice = "You've successfully signed up!"
       session[:user_id] = @user.id
       redirect_to "/"
     else
-      flash[:alert] = "There was a problem signing up."
+      flash.now.alert = "There was a problem signing up."
       redirect_to '/signup'
     end
   end

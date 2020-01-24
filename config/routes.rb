@@ -1,5 +1,6 @@
 
   Rails.application.routes.draw do
+  get 'pages/secret'
     root to: 'products#index'
     get '/signup' => 'users#new'
     post '/users' => 'users#create'

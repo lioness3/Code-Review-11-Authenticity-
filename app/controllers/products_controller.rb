@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authorize, only: [:secret]
 
   def secret
-    
+
   end
   def index
     @products = Product.all
@@ -25,10 +25,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-       flash[:notice] = "Your product was successfully added!"
+       flash.now.notice = "Your product was successfully added!"
       redirect_to products_path
     else
-       flash[:alert]= "ooops!"
+       flash.now.alert= "ooops!"
       render :new
     end
   end
