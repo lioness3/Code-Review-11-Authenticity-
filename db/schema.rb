@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2020_01_24_183811) do
     t.string "name"
     t.decimal "cost"
     t.string "country_of_origin"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -28,16 +28,17 @@ ActiveRecord::Schema.define(version: 2020_01_24_183811) do
     t.text "content_body"
     t.integer "rating"
     t.integer "product_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "username"
-    t.boolean "admin", default: false
+    t.boolean "admin"
     t.string "password_hash"
     t.string "password_salt"
   end
 
+  add_foreign_key "reviews", "products"
 end
