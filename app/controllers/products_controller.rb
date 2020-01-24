@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
        flash[:notice] = "Your product was successfully added!"
       redirect_to products_path
     else
-       flash.now[:alert]= "ooops!"
+       flash[:alert]= "ooops!"
       render :new
     end
   end
