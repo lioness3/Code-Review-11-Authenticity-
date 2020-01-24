@@ -1,5 +1,8 @@
 class ReviewsController < ApplicationController
+  before_action :authorize, only: [:secret]
 
+  def secret
+  end
   def index
     @reviews = Review.all
     render :index

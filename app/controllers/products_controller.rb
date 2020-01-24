@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
-  # before_action :authorize, only: [:secret]
-  #
-  # def secret
-  # end
+  before_action :authorize, only: [:secret]
+
+  def secret
+    
+  end
   def index
     @products = Product.all
     @product_selection = @products.name
