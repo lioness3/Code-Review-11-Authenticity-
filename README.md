@@ -8,7 +8,7 @@
 #### _By: Joann Carter_
 ***************
 # _Description_
-This is an application that will demonstrate a one to many relationship between product and reviews. This application uses a databases that is filled using the gem 'Faker' and has authentication and authorization using bcript. It also demonstrates testing with rspec and capybara, and routing with rails.
+This is an application that will demonstrate a one to many relationship between product and reviews. This application uses a databases that is filled using the gem 'Faker' and has authentication and authorization using BCRYPT. It also demonstrates testing with rspec and capybara, and routing with rails.
 
 #  _Specification Chart_
 
@@ -26,14 +26,16 @@ This is an application that will demonstrate a one to many relationship between 
 ***************
 # _Technology Used_
 * Ruby
+* Rails
+* BCRYPT
 * Pry
-* rspec
+* RSPEC
 * Google
-* postgres
+* Postgres
 * PSQL
 * Rake
-* sinatra
-* capybara
+* Sinatra
+* Capybara
 *
 *
 *
