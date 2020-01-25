@@ -15,12 +15,12 @@ private
   end
 
   def self.usa
-  where("country_of_origin like ?", "%United States%" )
+  where("country_of_origin like ?", "%United States%" || "%US%" || "%united states%" || "%us%" )
   end
 
 
   def self.three_most_recent
     order(created_at:  :desc).limit(3)
   end
-  
+
 end

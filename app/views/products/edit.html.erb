@@ -6,17 +6,21 @@
 
 <%= render "layouts/product_form", :object => @product %>
 
-<% if @reviews.any? %>
-  <h4>Here are the current reviews for this product</h4>
-  <div class="add_review">
-    <%= form_for @reviews do |f| %>
-    <%= f.label :rating %>
-    <%= f.integer :rating %>
-    <%= f.label :content_body %>
-    <%= f.text_field :content_body%>
-    <%= f.collection_select(:product_id, @reviews, :id, :rating, :content_body)%>
-    <%= f.submit  %>
+<h4>Current reviews for this product</h4>
+
+<div class="reviews">
+  <% if @review.any? %>
+  <ul class = "list-group">
+    <% @review.each do |x| %>
+    <li class =
+    "list-group-item"><p><%=  x.author %></p><p><%=  x.content_body %></p></li>
+    <li class =
+    "list-group-item" id = "empty_row"></li>
     <% end %>
-  </div>
-<% end %>
+  </ul>
+  <% else %>
+  <p>Be the first to review this product!</p>
+  <% end %>
+</div>
+<p><%= link_to "Add a Review", new_product_review_path(@product, @review) %></p>
 <%= render "layouts/company_info" %>
