@@ -13,4 +13,10 @@ class ApplicationController < ActionController::Base
       redirect_to '/'
     end
   end
+  def authorize_admin
+    if current_user.admin == false
+      flash.now.alert = "You aren't an admin."
+      redirect_to '/'
+    end
+  end
 end

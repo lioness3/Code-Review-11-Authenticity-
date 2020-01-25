@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
   before_action :authorize, only: [:secret]
+  before_action :authorize_admin, only: [:new], [:create], [:update], [:destroy]
 
   def secret
-
   end
   def index
     @products = Product.all
