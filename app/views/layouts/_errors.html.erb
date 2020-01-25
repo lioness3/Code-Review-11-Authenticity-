@@ -6,10 +6,12 @@
     <% object.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
-  <% end %>
-  <% if @product.reviews.any? %>
-  <% if @review.errors.any? %>
-  <p> Your character count was only  <%= @review.content_body.count('content_body') %> </p>
+
+    <% if @product.reviews.any? %>
+      <% if @review.errors.any? %>
+        <p> Your character count was only  <%= @review.content_body.count('content_body') %> </p>
+      <% end %>
+    <% else %>
 <% end %>
 <% end %>
 </ul>
