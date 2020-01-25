@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authorize, only: [:secret]
+  before_action :authorize, only: [:secret, :new, :create, :edit]
 
   def secret
   end
