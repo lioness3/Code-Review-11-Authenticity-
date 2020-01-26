@@ -5,7 +5,6 @@ class Review < ApplicationRecord
  scope :most_popular, -> { group(:product_id).count.sort_by(&:size) }
 
 
-
   def self.most_popular
    group(:product_id).count.sort_by(&:size)
 
