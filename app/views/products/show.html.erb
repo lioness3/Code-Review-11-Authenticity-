@@ -1,20 +1,24 @@
 <%= render "layouts/company_logo" %>
 
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <%= link_to "Edit", edit_product_path(@product) %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <%= link_to "Delete", product_path(@product),
+      :data => {:confirm => "You sure?",
+      :method => "delete"} %>
+    </div>
+  </div>
+</div>
 <div class="product_info">
   <h3><%= @product.name %> $<%= @product.cost %></h3>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <%= link_to "Edit", edit_product_path(@product) %>
-      </div>
-      <div class="col-sm">
-        <%= link_to "Delete", product_path(@product),
-        :data => {:confirm => "You sure?",
-        :method => "delete"} %>
-      </div>
-    </div>
-  </div>
 <%= image_tag href = 'https://robohash.org/nequeautqui.png?size=300x300&set=set1' %>
     <div class="description">
       <p>Glossier pork belly pabst ramps actually photo booth typewriter disrupt asymmetrical artisan brooklyn poutine. Meditation readymade heirloom keytar, austin unicorn coloring book tousled. Freegan gentrify narwhal gochujang hashtag brunch tilde glossier affogato mustache 90's VHS. Enamel pin keytar bespoke, jean shorts taxidermy man braid 3 wolf moon pinterest freegan ugh messenger bag hoodie cray.</p>
@@ -29,7 +33,7 @@
       <ul class = "list-group">
         <% @product.reviews.each do |x| %>
         <li class =
-        "list-group-item"><p><%=  x.author %></p><p><%=  x.content_body %></p></li>
+        "list-group-item"><p>Written by: <em><%=  x.author %></em></p><p><%=  x.content_body %></p></li>
         <li class =
         "list-group-item" id = "empty_row"></li>
         <% end %>

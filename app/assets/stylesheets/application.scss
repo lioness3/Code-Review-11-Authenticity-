@@ -32,6 +32,15 @@ float:right;
   padding: 10%;
   text-align: center;
 }
+#product_list_line_item{
+  background-color: lightblue;
+  border: solid white;
+  padding-left: 40px;
+}
+#empty_line{
+  background-color: white;
+  border: solid lightblue;
+}
 
 .description{
   font-size: 5pt;

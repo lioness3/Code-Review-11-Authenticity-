@@ -13,7 +13,7 @@
     <% if current_user %>
       Hello, <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
     <% else %>
-      hello, Stranger. Please <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+      Hello, Stranger. Please <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
     <% end %>
       || <%= link_to "HOME", root_path %> ||
     <%= flash[:alert] %>
