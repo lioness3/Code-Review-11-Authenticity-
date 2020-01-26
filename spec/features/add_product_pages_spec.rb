@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "the add product process" do
     it "adds a new product" do
-      user = User.create!(:email => '1@66', :admin => true, :username => 'mine', :password => 6, :password_confirmation => 6, :id => 900)
-      user.save
+      user2 = User.create!(:email => '1@66', :admin => true, :username => 'mine', :password => 6, :password_confirmation => 6, :id => 900)
+      user2.save
     visit '/'
     click_link 'New Product'
     fill_in 'name', :with => 'Thingy'
