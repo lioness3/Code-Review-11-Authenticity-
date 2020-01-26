@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @usa = Product.usa
     @top = Product.three_most_recent
     @reviews = Review.all
-    if @reviews.any?
+    if @reviews
       @popular_array = Review.most_popular.first
       @popular = Product.find(@popular_array[0])
     end
@@ -59,13 +59,10 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    @reviews = @product.reviews
-    @reviews.each do|review|
-      review.destroy
-    end
-  
     @product.destroy
-    redirect_to products_path
+     flash[:notice] = " #{@product.name} was deleted!"
+     @products = Product.all
+    redirect_to '/'
   end
 
   private

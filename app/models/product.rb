@@ -5,7 +5,7 @@ class Product < ApplicationRecord
 
   scope :three_most_recent, -> {order(created_at: :desc).limit(3)}
 
-  has_many :reviews
+  has_many :reviews, :dependent => :delete_all
 
   validates :name, :cost, :country_of_origin, presence: true
 

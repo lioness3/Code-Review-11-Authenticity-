@@ -3,7 +3,7 @@
 <div class="categorie">
 
   <% if @products.any? %>
-    <% if @reviews.any? %>
+    <% if @reviews %>
       <div class="most_reviews">
         <h1>Most Popular</h1>
         <h3><%= link_to @popular.name, product_path(@popular) %></h3>
