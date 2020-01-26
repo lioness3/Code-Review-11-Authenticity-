@@ -26,25 +26,40 @@ text-align: center;
 font-size: 20px;
 float:right;
 }
+.flash-messages{
+  font-size: 30px;
+  color: #FFF333;
+  font-weight: bold;
+  padding: 20px;
+}
 .product_info{
   background-color: white;
   border-radius: 20pt;
   padding: 10%;
   text-align: center;
 }
-
-
+// .most_reviews h5{
+// text-align: left;
+// padding-left: 5%;
+// }
 
 .description {
   font-size: 5pt;
   text-align: left;
   padding:0px 100px;
+  font-family: 'Zhi Mang Xing', cursive;
 }
 .categorie, .made_in_america{
 margin:0;
 padding:5%;
 text-align: center;
 background-color: white;
+
+}
+.categorie h1, .made_in_america h1, .most_reviews h1{
+background-color: lightgrey;
+font-family: 'Alfa Slab One', cursive;
+border-bottom: thick double #32a1ce;
 
 }
 .categorie ul, .made_in_america ul{
@@ -54,6 +69,7 @@ text-align: left;
 
 .add_product{
 margin-top: 10%;
+font-size: 20px;
 }
 #empty_row{
   background-color: lightgrey;

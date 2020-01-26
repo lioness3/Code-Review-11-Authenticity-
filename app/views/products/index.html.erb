@@ -4,15 +4,17 @@
 
   <% if @products.any? %>
     <% if @reviews %>
+
       <div class="most_reviews">
-        <h1>Most Popular</h1>
-        <h3><%= link_to @popular.name, product_path(@popular) %></h3>
+        <h1>Featured Product</h1>
+        <h5> ☞ <%= link_to @popular.name, product_path(@popular) %> ☜ </h5>
       </div>
+
     <% else %>
     <p>Be the first to review a product!</p>
     <% end %>
 
-    <h1>Product list</h1>
+    <h1>All Products</h1>
     <ul>
       <% @products.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>

@@ -7,19 +7,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Zhi+Mang+Xing&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <h3>
+
     <% if current_user %>
-      Hello, <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
+      <h3> Welcome back, <%= current_user.username %> ! || <%= link_to "Sign out", '/signout' %> ||</h3>
     <% else %>
-      Hello, Stranger. Please <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+      <h3> Hello, Stranger!  || <%= link_to "Sign up", 'signup' %> || <%= link_to "Sign in", '/signin' %>
     <% end %>
-      || <%= link_to "HOME", root_path %> ||
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
-    </h3>
+    || <%= link_to "HOME", root_path %> ||</h3>
+
+    <div class="flash-messages">
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+    </div>
+
     <%= yield %>
 
   </body>

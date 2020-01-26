@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authorize, only: [:secret, :new, :create, :edit, :update, :destroy]
+  before_action :authorize, only: [:secret, :new, :create, :edit, :show, :update, :destroy]
   before_action :authorize_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def secret
