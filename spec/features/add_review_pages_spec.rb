@@ -6,10 +6,10 @@ describe "the add review process" do
 
     visit '/products/55'
     click_link 'Add a Review'
-    fill_in 'Name', :with => 'Thingy'
-    fill_in 'Cost', :with => '33.33'
-    fill_in 'Country of origin', :with => 'USA'
-    click_on 'Create Product'
+    fill_in 'author', :with => 'me'
+    fill_in 'rating', :with => '1'
+    fill_in 'content_body', :with => 'This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.'
+    click_on 'Create Review'
     expect(page).to have_content 'Your review was successfully added!'
     expect(page).to have_content 'Thingy'
   end
