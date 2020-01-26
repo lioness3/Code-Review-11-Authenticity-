@@ -11,7 +11,7 @@ describe "the add review process" do
     fill_in 'content_body', :with => 'This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.This is a string a string that is atleast 50 characters.'
     click_on 'Create Review'
     expect(page).to have_content 'Your review was successfully added!'
-    expect(page).to have_content 'Thingy'
+    expect(page).to have_content 'author: me'
   end
   # it "gives an error when no name is entered" do
   #   visit '/reviews/new'

@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe "the add product process" do
     it "adds a new product" do
-    visit root_path
+      user = User.create(:email => '1@66', :admin => true, :username => 'mine', :password => 6, :password_confirmation => 6, :id => 900)
+      user.save
+    visit '/'
     click_link 'New Product'
     fill_in 'Name', :with => 'Thingy'
     fill_in 'Cost', :with => '33.33'
