@@ -29,7 +29,7 @@
       <ul class = "list-group">
         <% @product.reviews.each do |x| %>
         <li class =
-        "list-group-item"><p>Written by: <em><%=  x.author %></em></p><p><%=  x.content_body %></p></li>
+        "list-group-item"><p>Written by: <em> <%=  x.author %> </em> Rating: <%=  x.rating %> ⭐️⭐️⭐️⭐️⭐️</p><p><%=  x.content_body %></p></li>
         <li class =
         "list-group-item" id = "empty_row"></li>
         <% end %>
