@@ -9,7 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body><h3>
+  <body>
+    <h3>
     <% if current_user %>
       Hello, <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
     <% else %>
