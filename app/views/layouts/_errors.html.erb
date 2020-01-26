@@ -9,7 +9,7 @@
 
     <% if @product.reviews.any? %>
       <% if @review.errors.any? %>
-        <p> Your character count was only  <%= @review.content_body.count('content_body') %> </p>
+        <p> Your character count was <%= @review.content_body.count('content_body') %> </p>
       <% end %>
     <% else %>
 <% end %>
