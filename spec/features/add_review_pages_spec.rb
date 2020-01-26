@@ -3,7 +3,9 @@ require 'rails_helper'
 describe "the add review process" do
     it "adds a new review" do
       product2 = Product.create!({:name => 'Ting', :cost => '33.00', :country_of_origin => 'NBB', :id => 55})
-
+      product2.save
+      user = User.create(:email => '1@66', :admin => true, :username => 'mine', :password => 6, :password_confirmation => 6, :id => 900)
+      user.save
     visit '/products/55'
     click_link 'Add a Review'
     fill_in 'author', :with => 'me'
