@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body><h3>
     <% if current_user %>
       Hello, <%= current_user.username %> | <%= link_to "Sign out", '/signout' %>
     <% else %>
@@ -18,6 +18,8 @@
       || <%= link_to "HOME", root_path %> ||
     <%= flash[:alert] %>
     <%= flash[:notice] %>
+    </h3>
     <%= yield %>
+
   </body>
 </html>

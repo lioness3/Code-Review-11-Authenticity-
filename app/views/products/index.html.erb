@@ -16,7 +16,6 @@
     <ul>
       <% @products.each do |product| %>
       <li id = 'product_list_line_item'><%= link_to product.name, product_path(product) %></li>
-      <li id = 'empty_line'></li>
       <% end %>
     </ul>
 
