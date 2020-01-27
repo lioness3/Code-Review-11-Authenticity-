@@ -13,11 +13,11 @@
   <body>
 
     <% if current_user %>
-      <h3> Welcome back, <%= current_user.username %> ! || <%= link_to "Sign out", '/signout' %> ||</h3>
+      <h3> Welcome back, <%= current_user.username.upcase %>! || <%= link_to "Sign out", '/signout' %> ||</h3> 
     <% else %>
-      <h3> Hello, Stranger!  || <%= link_to "Sign up", 'signup' %> || <%= link_to "Sign in", '/signin' %>
+      <h3> Hello, Stranger!  || <%= link_to "Sign up", 'signup' %> || <%= link_to "Sign in", '/signin' %> ||</h3>
     <% end %>
-    || <%= link_to "HOME", root_path %> ||</h3>
+
 
     <div class="flash-messages">
       <%= flash[:alert] %>
