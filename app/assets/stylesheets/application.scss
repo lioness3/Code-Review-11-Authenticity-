@@ -14,6 +14,7 @@ margin-top: -5%;
 .logo h1{
   margin: 0%;
   padding: 0%;
+  text-shadow: #FC0 1px 0 10px;
 }
 .logo p{
   font-size: 5pt;
@@ -44,6 +45,8 @@ float:right;
 .page{
   border-radius: 20pt;
   background-color: white;
+  margin:0;
+  padding:5%;
 }
 .description {
   font-size: 10pt;
@@ -52,9 +55,10 @@ float:right;
   font-family: 'Cabin', sans-serif;
 
 }
-.categorie, .made_in_america{
-margin:0;
-padding:5%;
+.most_reviews h5{
+  text-shadow: #FC0 1px 0 10px;
+}
+.categorie, .made_in_america, .most_reviews{
 text-align: center;
 font-family: 'Comfortaa', cursive;
 }
@@ -73,6 +77,8 @@ text-align: left;
 .add_product{
 margin-top: 10%;
 font-size: 20px;
+text-align: center;
+text-shadow: #FC0 1px 0 10px;
 }
 #empty_row{
   background-color: lightgrey;
