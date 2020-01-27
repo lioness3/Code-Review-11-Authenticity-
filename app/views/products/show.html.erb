@@ -1,29 +1,23 @@
 <%= render "layouts/company_logo" %>
 
 <div class="product_info">
+  <%= image_tag href = 'https://robohash.org/nequeautqui.png?size=300x300&set=set1' %>
   <h3><%= @product.name %> $<%= @product.cost %></h3>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <%= link_to "Edit", edit_product_path(@product) %>
-      </div>
-      <div class="col-sm">
-        <%= link_to "Delete", product_path(@product),
-        :data => {:confirm => "You sure?",
-        :method => "delete"} %>
-      </div>
-    </div>
-  </div>
-<%= image_tag href = 'https://robohash.org/nequeautqui.png?size=300x300&set=set1' %>
     <div class="description">
+      <h5>Made in: <%= @product.country_of_origin%> </h5>
       <p>Glossier pork belly pabst ramps actually photo booth typewriter disrupt asymmetrical artisan brooklyn poutine. Meditation readymade heirloom keytar, austin unicorn coloring book tousled. Freegan gentrify narwhal gochujang hashtag brunch tilde glossier affogato mustache 90's VHS. Enamel pin keytar bespoke, jean shorts taxidermy man braid 3 wolf moon pinterest freegan ugh messenger bag hoodie cray.</p>
 
       <p>Oh. You need a little dummy text for your mockup? How quaint.</p>
 
       <p>I bet you’re still using Bootstrap too…</p>
+      <tr>
+        <td><%= link_to "Edit", edit_product_path(@product) %></td>
+        <td><%= link_to "Delete", product_path(@product),
+          :data => {:confirm => "You sure?",
+          :method => "delete"} %></td>
+      </tr>
     </div>
-    <h5>This product was made in: <%= @product.country_of_origin%> </h5>
     <div class="reviews">
       <% if @product.reviews.any? %>
       <ul class = "list-group">
@@ -40,10 +34,5 @@
     </div>
     <p><%= link_to "Add a Review", new_product_review_path(@product, @review) %></p>
 </div>
-
-
-
-<p id ="return_to_products"><%= link_to "Return to products", products_path %></p>
-
 
 <%= render "layouts/company_info" %>

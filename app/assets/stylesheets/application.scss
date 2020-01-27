@@ -38,23 +38,22 @@ float:right;
   padding: 10%;
   text-align: center;
 }
-// .most_reviews h5{
-// text-align: left;
-// padding-left: 5%;
-// }
-
+.page{
+  border-radius: 20pt;
+  background-color: white;
+}
 .description {
-  font-size: 5pt;
+  font-size: 10pt;
   text-align: left;
   padding:0px 100px;
-  font-family: 'Zhi Mang Xing', cursive;
+  font-family: 'Cabin', sans-serif;
+
 }
 .categorie, .made_in_america{
 margin:0;
 padding:5%;
 text-align: center;
-background-color: white;
-
+font-family: 'Comfortaa', cursive;
 }
 .categorie h1, .made_in_america h1, .most_reviews h1{
 background-color: lightgrey;
@@ -73,7 +72,4 @@ font-size: 20px;
 }
 #empty_row{
   background-color: lightgrey;
-}
-#return_to_products{
-  text-align: center;
 }
