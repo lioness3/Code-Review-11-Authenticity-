@@ -16,10 +16,10 @@
       <% @top.each do |x| %>
       <li><%= link_to x.name, product_path(x) %></li>
       <% end %>
-      <% else %>
+  <% else %>
       <p>There are no products yet.</p>
-      <% end %>
     </ul>
+  <% end %>
 </div>
   <div class="made_in_america">
     <h1> Made in America 🇺🇸</h1>
@@ -36,11 +36,13 @@
 
   <div class="categorie">
     <h1>All Products</h1>
+    <% if @products.any? %>
     <ul>
       <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
+          <li><%= link_to product.name, product_path(product) %></li>
       <% end %>
     </ul>
+  <% end %>
   </div>
   <div class="add_product">
     <p><%= link_to "New Product", new_product_path %></p>
