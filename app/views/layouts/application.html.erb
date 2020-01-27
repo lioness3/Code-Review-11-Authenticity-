@@ -14,9 +14,9 @@
   <body>
 
     <% if current_user %>
-      <h3> Welcome back, <%= current_user.username.upcase %>! || <%= link_to "Sign out", '/signout' %> ||</h3>
+      <h4> Welcome back, <%= current_user.username.upcase %>! ❀ <%= link_to "Sign out", '/signout' %></h4>
     <% else %>
-      <h3> Hello, Stranger!  || <%= link_to "Sign up", 'signup' %> || <%= link_to "Sign in", '/signin' %> ||</h3>
+      <h4> Hello, Stranger!  ❀ <%= link_to "Sign up", 'signup' %> ❀ <%= link_to "Sign in", '/signin' %></h4>
     <% end %>
 
 

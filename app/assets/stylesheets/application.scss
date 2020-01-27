@@ -8,13 +8,16 @@
 
 .logo{
 text-align: center;
+margin-top: -5%;
 }
+
 .logo h1{
   margin: 0%;
   padding: 0%;
 }
 .logo p{
   font-size: 5pt;
+  padding-bottom: 30px;
 }
 .contact_info{
   font-size: 10px;
@@ -59,7 +62,8 @@ font-family: 'Comfortaa', cursive;
 background-color: lightgrey;
 font-family: 'Alfa Slab One', cursive;
 border-bottom: thick double #32a1ce;
-
+padding: 10px;
+border-radius: 20pt;
 }
 .categorie ul, .made_in_america ul{
 list-style-type: none;
